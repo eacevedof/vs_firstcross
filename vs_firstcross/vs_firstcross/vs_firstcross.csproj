@@ -8,8 +8,8 @@
     <ProjectGuid>{1CDAC8C0-E44A-410E-A320-6270C17CD355}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>vs_firstcross</RootNamespace>
-    <AssemblyName>vs_firstcross</AssemblyName>
+    <RootNamespace>NsFirstcross</RootNamespace>
+    <AssemblyName>NsFirstcross</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>

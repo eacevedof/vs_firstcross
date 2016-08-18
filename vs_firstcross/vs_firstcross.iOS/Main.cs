@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace vs_firstcross.iOS
+namespace NsFirstcross.iOS
 {
     public class Application
     {

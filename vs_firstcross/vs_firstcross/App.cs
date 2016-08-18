@@ -5,7 +5,7 @@ using System.Text;
 
 using Xamarin.Forms;
 
-namespace vs_firstcross
+namespace NsFirstcross
 {
     public class App : Application
     {

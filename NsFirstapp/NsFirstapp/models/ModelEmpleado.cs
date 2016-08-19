@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using SQLite.Net.Attributes;
 namespace NsFirstapp.models
 {
-    class ModelEmpleado
+    public class ModelEmpleado
     {
         [PrimaryKey, AutoIncrement]
         public int id { get; set; }

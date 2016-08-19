@@ -11,7 +11,11 @@ using SQLite.Net.Interop;
 
 namespace NsFirstapp.interfaces
 {
-    interface InterfaceConfig
+    public interface InterfaceConfig
     {
+        string sPathDbFolder { get; }
+        ISQLitePlatform oSQLPlatform { get; }
+
     }//InterfaceConfig
+
 }//NsFirstapp.interfaces

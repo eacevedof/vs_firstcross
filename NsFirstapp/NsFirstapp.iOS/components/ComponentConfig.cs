@@ -7,6 +7,12 @@ using System;
 using NsFirstapp.interfaces;
 using SQLite.Net.Interop;
 
+//necesito este NS para que esta interface se pueda usar en toda la app
+using Xamarin.Forms;
+//para que pueda usar la interface en la capa de aplicacion debemos utilizar esta etiqueta
+//Dependency nos permite tener compatibilidad con las 3 plataformas
+[assembly: Dependency(typeof(NsFirstapp.iOS.components.ComponentConfig))]
+
 namespace NsFirstapp.iOS.components
 {
     public class ComponentConfig : InterfaceConfig

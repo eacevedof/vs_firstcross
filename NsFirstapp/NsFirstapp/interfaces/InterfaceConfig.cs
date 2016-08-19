@@ -13,8 +13,8 @@ namespace NsFirstapp.interfaces
 {
     public interface InterfaceConfig
     {
-        string sPathDbFolder { get; }
-        ISQLitePlatform oSQLPlatform { get; }
+        string get_db_folder { get; }
+        ISQLitePlatform get_platform { get; }
 
     }//InterfaceConfig
 

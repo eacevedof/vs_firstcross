@@ -42,7 +42,8 @@ namespace NsFirstapp.Windows.components
                 if (string.IsNullOrEmpty(this.sPathDbFolder))
                 {
                     //Error:var sPersonalFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-                    var sPersonalFolder = "c:/";
+                    var sPersonalFolder = "c:/firstapp/";
+                    this.sPathDbFolder = sPathDbFolder;
                     //                    this.sPathDbFolder = System.IO.Path.Combine(sPersonalFolder, "..", "Library");
                 }
                 return this.sPathDbFolder;

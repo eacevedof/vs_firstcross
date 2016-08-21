@@ -41,8 +41,10 @@ namespace NsFirstapp.WinPhone.components
             {
                 if (string.IsNullOrEmpty(this.sPathDbFolder))
                 {
-                    var sPersonalFolder = "c:/";
-//                    this.sPathDbFolder = System.IO.Path.Combine(sPersonalFolder, "..", "Library");
+                    //Error:var sPersonalFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+                    var sPersonalFolder = "c:/firstapp/";
+                    this.sPathDbFolder = sPathDbFolder;
+                    //                    this.sPathDbFolder = System.IO.Path.Combine(sPersonalFolder, "..", "Library");
                 }
                 return this.sPathDbFolder;
                 //throw new NotImplementedException();

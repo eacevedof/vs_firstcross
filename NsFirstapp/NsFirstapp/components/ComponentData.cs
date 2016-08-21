@@ -54,24 +54,24 @@ namespace NsFirstapp.components
 
         public ModelEmpleado get_empleado(int idEmpleado)
         {
-            return oSQLiteConx.Table<ModelEmpleado>().FirstOrDefault(c=>c.id == idEmpleado);
+            return this.oSQLiteConx.Table<ModelEmpleado>().FirstOrDefault(c=>c.id == idEmpleado);
         }//get_empleado
 
         public List<ModelEmpleado> get_empleados()
         {
-            return oSQLiteConx.Table<ModelEmpleado>().ToList();
+            return this.oSQLiteConx.Table<ModelEmpleado>().ToList();
         }//get_empleados
 
         public List<ModelEmpleado> get_empleados(bool isOrderApellidos)
         {
-            return oSQLiteConx.Table<ModelEmpleado>().ToList();
+            return this.oSQLiteConx.Table<ModelEmpleado>().ToList();
             if(isOrderApellidos)
-                return oSQLiteConx.Table<ModelEmpleado>().OrderBy(c=>c.last_name).ToList();
+                return this.oSQLiteConx.Table<ModelEmpleado>().OrderBy(c=>c.last_name).ToList();
         }//get_empleados
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            this.oSQLiteConx.Dispose();
         }//Dispose
     }//ComponentData
 

@@ -1,5 +1,5 @@
 ﻿/**
-* @file:\NsFirstapp\NsFirstapp\models\ModelEmpleado.cs 1.0.2
+* @file:\NsFirstapp\NsFirstapp\models\ModelEmpleado.cs 1.0.3
 **/
 using System;
 using System.Collections.Generic;
@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 using SQLite.Net.Attributes;
+
+
 namespace NsFirstapp.models
 {
+    [Table("app_empleado")]
     public class ModelEmpleado
     {
-        [PrimaryKey, AutoIncrement]
+        [PrimaryKey, AutoIncrement] 
         public int id { get; set; }
         public string first_name { get; set; }
         public string last_name { get; set; }

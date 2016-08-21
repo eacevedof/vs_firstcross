@@ -65,9 +65,10 @@ namespace NsFirstapp.components
 
         public List<ModelEmpleado> get_empleados(bool isOrderApellidos)
         {
-            return this.oSQLiteConx.Table<ModelEmpleado>().ToList();
             if(isOrderApellidos)
                 return this.oSQLiteConx.Table<ModelEmpleado>().OrderBy(c=>c.last_name).ToList();
+            else
+                return this.oSQLiteConx.Table<ModelEmpleado>().ToList();
         }//get_empleados
 
         public void Dispose()

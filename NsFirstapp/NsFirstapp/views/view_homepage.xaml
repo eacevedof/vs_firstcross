@@ -10,10 +10,14 @@
     />
     <Entry x:Name="entNombres" Placeholder="Nombres" TextColor="White"/>
     <Entry x:Name="entApellidos" Placeholder="Apellidos" TextColor="White"/>
-    <DatePicker x:Name="datBirthdate"/>
     <Entry x:Name="entSalary" Placeholder="Salario" Keyboard="Numeric" TextColor="White"/>
-    <Label Text="Active" TextColor="White"/>
-    <Switch x:Name="swActive" IsToggled="True"/>
+    
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Fec. Nacimiento" Font="14" VerticalOptions="Center"/>
+      <DatePicker x:Name="datBirthdate"/>      
+      <Label Text="Active" TextColor="White" VerticalOptions="Center"/>
+      <Switch x:Name="swActive" IsToggled="True" VerticalOptions="Center"/>
+    </StackLayout>
   </StackLayout>
 
 </ContentPage>

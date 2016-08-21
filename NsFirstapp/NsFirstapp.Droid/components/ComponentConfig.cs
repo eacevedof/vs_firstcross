@@ -1,4 +1,6 @@
-
+/*
+ * @file: \NsFirstapp\NsFirstapp.Droid\components\ComponentConfig.cs 1.0.0
+ */
 using System;
 using System.Collections.Generic;
 using System.Linq;

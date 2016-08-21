@@ -29,6 +29,7 @@ namespace NsFirstapp.components
 
         public void db_connect()
         {
+            //https://developer.xamarin.com/guides/cross-platform/application_fundamentals/data/part_3_using_sqlite_orm/
             var oCompConfig = DependencyService.Get<InterfaceConfig>();
             this.oSQLiteConx = new SQLiteConnection(oCompConfig.get_platform
                 ,Path.Combine(oCompConfig.get_db_folder,this.sDbName));

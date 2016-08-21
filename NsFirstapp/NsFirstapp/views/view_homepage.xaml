@@ -2,8 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NsFirstapp.views.ViewHomepage">
-<StackLayout>
-  <Label Text="Empleados" Font="24"/>
+  <StackLayout>
+    <Label Text="Empleados" 
+           Font="24"
+           HorizontalOptions="Center"
+           TextColor="White"
+    />
+    <Entry x:Name="entNombres" Placeholder="Nombres" TextColor="White"/>
+    <Entry x:Name="entApellidos" Placeholder="Apellidos" TextColor="White"/>
+    <DatePicker x:Name="datBirthdate"/>
+    <Entry x:Name="entSalary" Placeholder="Salario" Keyboard="Numeric" TextColor="White"/>
+    <Label Text="Active" TextColor="White"/>
+    <Switch x:Name="swActive" IsToggled="True"/>
+  </StackLayout>
 
-</StackLayout>
 </ContentPage>

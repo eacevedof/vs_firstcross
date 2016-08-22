@@ -25,6 +25,7 @@ namespace NsFirstapp.components
         {
             this.oSQLiteConx = null;
             this.sDbName = "db_empleados.db3";
+            this.db_connect();
         }
 
         public void db_connect()

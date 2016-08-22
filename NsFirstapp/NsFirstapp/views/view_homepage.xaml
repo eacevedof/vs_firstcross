@@ -8,16 +8,24 @@
            HorizontalOptions="Center"
            TextColor="White"
     />
-    <Entry x:Name="entNombres" Placeholder="Nombres" TextColor="White"/>
-    <Entry x:Name="entApellidos" Placeholder="Apellidos" TextColor="White"/>
+    <Entry x:Name="entFirstName" Placeholder="Nombres" TextColor="White"/>
+    <Entry x:Name="entLastName" Placeholder="Apellidos" TextColor="White"/>
     <Entry x:Name="entSalary" Placeholder="Salario" Keyboard="Numeric" TextColor="White"/>
     
     <StackLayout Orientation="Horizontal">
       <Label Text="Fec. Nacimiento" Font="14" VerticalOptions="Center"/>
-      <DatePicker x:Name="datBirthdate"/>      
+      <DatePicker x:Name="dapBirthdate"/>  
+      
       <Label Text="Active" TextColor="White" VerticalOptions="Center"/>
-      <Switch x:Name="swActive" IsToggled="True" VerticalOptions="Center"/>
+      <Switch x:Name="swIsEnabled" IsToggled="True" VerticalOptions="Center"/>
     </StackLayout>
+
+    <Button x:Name="butInsert" Text="Agregar" 
+            HorizontalOptions="Center"
+            BackgroundColor="Yellow"
+            TextColor="Black"/>
+    
+    <ListView x:Name="lvwEmpleados"/>
   </StackLayout>
 
 </ContentPage>

@@ -13,6 +13,6 @@ namespace NsFirstapp.views
         public ViewHomepage()
         {
             InitializeComponent();
-        }
-    }
-}
+        }//ViewHomepage
+    }//ViewHomepage : ContentPage
+}//NsFirstapp.views

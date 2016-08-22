@@ -12,15 +12,15 @@ using SQLite.Net.Attributes;
 
 namespace NsFirstapp.models
 {
-    [Table("app_empleado")]
+    [Table("app_emloyee")]
     public class ModelEmpleado
     {
         [PrimaryKey, AutoIncrement] 
         public int id { get; set; }
         public string first_name { get; set; }
         public string last_name { get; set; }
-        public string birth_date { get; set; }
         public decimal salary { get; set; }
+        public string birth_date { get; set; }
         public bool is_enabled { get; set; }
 
         public override string ToString()

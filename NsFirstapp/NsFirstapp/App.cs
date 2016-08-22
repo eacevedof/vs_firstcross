@@ -1,4 +1,6 @@
-﻿
+﻿/*
+ * @file \nsfirstapp\nsfirstapp\app.cs 1.0.0
+ */
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,5 +33,5 @@ namespace NsFirstapp
         {
             // Handle when your app resumes
         }
-    }
-}
+    }//App
+}//NsFirstapp

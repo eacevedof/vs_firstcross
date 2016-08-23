@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*
+ *@file: \NsFirstapp\NsFirstapp\helpers\HelperViewCellEmpleado.cs 1.0.0
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -58,14 +61,14 @@ namespace NsFirstapp.helpers
             {
                 HorizontalOptions = LayoutOptions.End
             };
-            swIsEnabled.SetBinding(Label.TextProperty, new Binding("is_enabled"));
+            swIsEnabled.SetBinding(Switch.IsToggledProperty, new Binding("is_enabled"));
 
             this.View = new StackLayout
             {
-                Children = {lblId,lblFirstName,lblLastName,lblSalary,lblBirthdate,swIsEnabled },
+                Children = {lblId,lblFirstName,lblLastName,lblSalary,lblBirthdate,swIsEnabled},
                 Orientation = StackOrientation.Horizontal
             };
-        }
+        }//HelperViewCellEmpleado()
 
-    }
-}
+    }//HelperViewCellEmpleado
+}//NsFirstapp.helpers

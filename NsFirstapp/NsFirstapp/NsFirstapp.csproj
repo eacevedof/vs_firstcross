@@ -37,7 +37,7 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="components\ComponentData.cs" />
-    <Compile Include="helpers\helper_viewcell_empleado.cs" />
+    <Compile Include="helpers\HelperViewCellEmpleado.cs" />
     <Compile Include="views\view_homepage.xaml.cs">
       <DependentUpon>view_homepage.xaml</DependentUpon>
     </Compile>

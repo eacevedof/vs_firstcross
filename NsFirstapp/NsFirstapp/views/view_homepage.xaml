@@ -18,7 +18,10 @@
         <DatePicker x:Name="dapBirthdate"/>  
       
         <Label Text="Active" TextColor="White" VerticalOptions="Center"/>
-        <Switch x:Name="swIsEnabled" IsToggled="True" VerticalOptions="Center"/>
+        <Switch x:Name="swIsEnabled" 
+                IsToggled="True" 
+                VerticalOptions="Center"
+                />
       </StackLayout>
 
       <Button x:Name="butInsert" Text="Agregar" 

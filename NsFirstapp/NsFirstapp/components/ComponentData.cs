@@ -1,5 +1,5 @@
 ﻿/*
- *@file: \NsFirstapp\NsFirstapp\components\ComponentData.cs 1.0.0
+ *@file: \NsFirstapp\NsFirstapp\components\ComponentData.cs 1.0.1
  */
 using System;
 using System.Collections.Generic;
@@ -18,12 +18,12 @@ namespace NsFirstapp.components
 {
     public class ComponentData : IDisposable
     {
-        private SQLiteConnection oSQLiteConx;
+        private SQLiteConnection oSQLiteConn;
         private string sDbName;
 
         public ComponentData()
         {
-            this.oSQLiteConx = null;
+            this.oSQLiteConn = null;
             this.sDbName = "db_empleados.db3";
             this.db_connect();
         }
@@ -32,49 +32,49 @@ namespace NsFirstapp.components
         {
             //https://developer.xamarin.com/guides/cross-platform/application_fundamentals/data/part_3_using_sqlite_orm/
             var oCompConfig = DependencyService.Get<InterfaceConfig>();
-            this.oSQLiteConx = new SQLiteConnection(oCompConfig.get_platform
+            this.oSQLiteConn = new SQLiteConnection(oCompConfig.get_platform
                 ,Path.Combine(oCompConfig.get_db_folder,this.sDbName));
 
-            this.oSQLiteConx.CreateTable<ModelEmpleado>();
+            this.oSQLiteConn.CreateTable<ModelEmpleado>();
 
         }//db_connect
 
         public void insert_empleado(ModelEmpleado oEmpleado)
         {
-            this.oSQLiteConx.Insert(oEmpleado);
+            this.oSQLiteConn.Insert(oEmpleado);
         }//insert_empleado
 
         public void update_empleado(ModelEmpleado oEmpleado)
         {
-            this.oSQLiteConx.Update(oEmpleado);
+            this.oSQLiteConn.Update(oEmpleado);
         }//update_empleado
 
         public void delete_empleado(ModelEmpleado oEmpleado)
         {
-            this.oSQLiteConx.Delete(oEmpleado);
+            this.oSQLiteConn.Delete(oEmpleado);
         }//delete_empleado
 
         public ModelEmpleado get_empleado(int idEmpleado)
         {
-            return this.oSQLiteConx.Table<ModelEmpleado>().FirstOrDefault(c=>c.id == idEmpleado);
+            return this.oSQLiteConn.Table<ModelEmpleado>().FirstOrDefault(c=>c.id == idEmpleado);
         }//get_empleado
 
         public List<ModelEmpleado> get_empleados()
         {
-            return this.oSQLiteConx.Table<ModelEmpleado>().ToList();
+            return this.oSQLiteConn.Table<ModelEmpleado>().ToList();
         }//get_empleados
 
         public List<ModelEmpleado> get_empleados(bool isOrderApellidos)
         {
             if(isOrderApellidos)
-                return this.oSQLiteConx.Table<ModelEmpleado>().OrderBy(c=>c.last_name).ToList();
+                return this.oSQLiteConn.Table<ModelEmpleado>().OrderBy(c=>c.last_name).ToList();
             else
-                return this.oSQLiteConx.Table<ModelEmpleado>().ToList();
+                return this.oSQLiteConn.Table<ModelEmpleado>().ToList();
         }//get_empleados
 
         public void Dispose()
         {
-            this.oSQLiteConx.Dispose();
+            this.oSQLiteConn.Dispose();
         }//Dispose
     }//ComponentData
 

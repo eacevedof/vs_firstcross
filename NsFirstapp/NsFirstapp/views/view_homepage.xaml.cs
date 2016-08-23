@@ -11,6 +11,7 @@ using Xamarin.Forms;
 
 using NsFirstapp.models;
 using NsFirstapp.components;
+using NsFirstapp.helpers;
 
 namespace NsFirstapp.views
 {
@@ -20,7 +21,7 @@ namespace NsFirstapp.views
         {
             InitializeComponent();
             butInsert.Clicked += ButInsert_Clicked;
-
+            lvwEmpleados.ItemTemplate = new DataTemplate(typeof(HelperViewCellEmpleado));
             using (var oCompData = new ComponentData())
             {
                 lvwEmpleados.ItemsSource = oCompData.get_empleados();

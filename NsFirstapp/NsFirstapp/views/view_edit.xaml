@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NsFirstapp.views.ViewEdit">
+  <ScrollView>
+    <StackLayout Padding="10" Spacing="10">
+      <Label Text="Editar Empleado" Font="24" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes=""/>
+      <Entry x:Name="entFirstName" Placeholder="Nombre"/>
+      <Entry x:Name="entLastName" Placeholder="Apellidos"/>
+      <Entry x:Name="entSalary" Placeholder="Salario"/>
+    </StackLayout>  
+  </ScrollView>
+  
+</ContentPage>

@@ -14,6 +14,7 @@ using System.IO;
 using NsFirstapp.interfaces;
 using NsFirstapp.models;
 
+
 namespace NsFirstapp.components
 {
     public class ComponentData : IDisposable
@@ -46,12 +47,13 @@ namespace NsFirstapp.components
 
         public void update_empleado(ModelEmpleado oEmpleado)
         {
-            this.oSQLiteConn.Update(oEmpleado);
+            int iResult = 0;
+            iResult = this.oSQLiteConn.Update(oEmpleado);
         }//update_empleado
 
         public void delete_empleado(ModelEmpleado oEmpleado)
         {
-            this.oSQLiteConn.Delete(oEmpleado);
+            int iResult = this.oSQLiteConn.Delete(oEmpleado);
         }//delete_empleado
 
         public ModelEmpleado get_empleado(int idEmpleado)

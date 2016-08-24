@@ -1,5 +1,5 @@
 ﻿/*
- * @file \nsfirstapp\nsfirstapp\app.cs 1.0.0
+ * @file \nsfirstapp\nsfirstapp\app.cs 1.0.1
  */
 using System;
 using System.Collections.Generic;
@@ -16,7 +16,7 @@ namespace NsFirstapp
         public App()
         {
             // The root page of your application
-            MainPage = new ViewHomepage();
+            MainPage = new NavigationPage(new ViewHomepage());
         }
 
         protected override void OnStart()

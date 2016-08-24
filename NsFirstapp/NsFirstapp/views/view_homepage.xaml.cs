@@ -21,12 +21,23 @@ namespace NsFirstapp.views
         {
             InitializeComponent();
             butInsert.Clicked += ButInsert_Clicked;
+            lvwEmpleados.ItemSelected += LvwEmpleados_ItemSelected;
             lvwEmpleados.ItemTemplate = new DataTemplate(typeof(HelperViewCellEmpleado));
+                            
             using (var oCompData = new ComponentData())
             {
                 lvwEmpleados.ItemsSource = oCompData.get_empleados();
             }
         }//ViewHomepage
+
+        private void LvwEmpleados_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            //al pinchar en un elemento del listview se lanza el evento "e" que lleva en el el objeto del registro
+            //que en este caso es ModelEmpleado, lo lleva como object así que le debemos hacer un cast.
+            //Despues de configurar este evento, si lo dejamos tal cual y ejecutamos la app daria un error ya que 
+            //hay que cambiar en \nsfirstapp\nsfirstapp\app.cs la variable "MainPage" esta debe pasar a ser una "NavigationPage"
+            this.Navigation.PushAsync(new ViewEdit((ModelEmpleado) e.SelectedItem));
+        }
 
         public void ButInsert_Clicked(object sender, EventArgs e)
         {

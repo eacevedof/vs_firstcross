@@ -4,11 +4,40 @@
              x:Class="NsFirstapp.views.ViewEdit">
   <ScrollView>
     <StackLayout Padding="10" Spacing="10">
-      <Label Text="Editar Empleado" Font="24" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes=""/>
-      <Entry x:Name="entFirstName" Placeholder="Nombre"/>
-      <Entry x:Name="entLastName" Placeholder="Apellidos"/>
-      <Entry x:Name="entSalary" Placeholder="Salario"/>
-    </StackLayout>  
+      <Label Text="Editar Empleados"
+             Font="24"
+             HorizontalOptions="Center"
+             VerticalOptions="Center"
+             TextColor="White"
+      />
+      <Entry x:Name="entFirstName" Placeholder="Nombres" TextColor="White"/>
+      <Entry x:Name="entLastName" Placeholder="Apellidos" TextColor="White"/>
+      <Entry x:Name="entSalary" Placeholder="Salario" Keyboard="Numeric" TextColor="White"/>
+
+      <StackLayout Orientation="Horizontal">
+        <Label Text="Fec. Nacimiento" Font="14" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+        <DatePicker x:Name="dapBirthdate"/>
+
+        <Label Text="Active" TextColor="White" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+        <Switch x:Name="swIsEnabled"
+                IsToggled="True"
+                VerticalOptions="Center"
+                HorizontalOptions="End"
+                />
+      </StackLayout>
+
+      <Button x:Name="butUpdate" Text="Actualizar"
+              HorizontalOptions="Center"
+              BackgroundColor="Yellow"
+              TextColor="Black"/>
+      
+      <Button x:Name="butDelete" Text="Eliminar"
+              HorizontalOptions="Center"
+              BackgroundColor="Red"
+              TextColor="White"/>
+
+      <ListView x:Name="lvwEmpleados"/>
+    </StackLayout>
   </ScrollView>
   
 </ContentPage>

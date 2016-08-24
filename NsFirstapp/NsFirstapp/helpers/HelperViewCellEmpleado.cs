@@ -63,10 +63,25 @@ namespace NsFirstapp.helpers
             };
             swIsEnabled.SetBinding(Switch.IsToggledProperty, new Binding("is_enabled"));
 
+            StackLayout oStackLayout1 = new StackLayout
+            {
+                Children = { lblId, lblFirstName, lblLastName},
+                Orientation = StackOrientation.Horizontal,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+            };
+
+            StackLayout oStackLayout2 = new StackLayout
+            {
+                Children = {lblSalary,lblBirthdate,swIsEnabled},
+                Orientation = StackOrientation.Horizontal,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+            };
+
             this.View = new StackLayout
             {
-                Children = {lblId,lblFirstName,lblLastName,lblSalary,lblBirthdate,swIsEnabled},
-                Orientation = StackOrientation.Horizontal
+                Children = {oStackLayout1,oStackLayout2},
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                Orientation = StackOrientation.Vertical
             };
         }//HelperViewCellEmpleado()
 

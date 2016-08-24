@@ -47,8 +47,7 @@ namespace NsFirstapp.components
 
         public void update_empleado(ModelEmpleado oEmpleado)
         {
-            int iResult = 0;
-            iResult = this.oSQLiteConn.Update(oEmpleado);
+            int iResult = this.oSQLiteConn.Update(oEmpleado);
         }//update_empleado
 
         public void delete_empleado(ModelEmpleado oEmpleado)

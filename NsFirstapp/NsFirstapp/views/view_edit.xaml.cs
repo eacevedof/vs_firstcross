@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * @file: \NsFirstapp\NsFirstapp\views\view_edit.xaml.cs 1.0.1
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -49,10 +53,6 @@ namespace NsFirstapp.views
 
         public async void ButUpdate_Clicked(object sender, EventArgs e)
         {
-            bool isConfirmed = await DisplayAlert("Confirmación", "¿Desea guardar el empleado?", "Sí", "No");
-            if (!isConfirmed)
-                return;
-
             if (string.IsNullOrEmpty(entFirstName.Text))
             {
                 await DisplayAlert("Error", "Debe ingresar nombres", "Aceptar");
@@ -74,7 +74,15 @@ namespace NsFirstapp.views
                 return;
             }
 
-            ModelEmpleado oEmpelado = new ModelEmpleado
+            bool isConfirmed = await DisplayAlert("Confirmación", "¿Desea guardar el empleado?", "Sí", "No");
+            if (!isConfirmed)
+                return;
+
+            //OJO con esto, si la variable creada se llama igual a una variable global si en otra parte
+            //de este mismo ambito se usa este nombre se dara prioridada a la global (aún sin usar this)
+            //por esto no me actualizaba con el objeto oEmpleado local. 
+            //He cambiado el nombre y ahora todo bien.
+            ModelEmpleado oEmp = new ModelEmpleado
             {
                 id = this.oEmpleado.id,
                 is_enabled = swIsEnabled.IsToggled,
@@ -84,9 +92,15 @@ namespace NsFirstapp.views
                 salary = decimal.Parse(entSalary.Text)
             };
 
+            //this.oEmpleado.first_name = entFirstName.Text;
+            //this.oEmpleado.last_name = entLastName.Text;
+            //this.oEmpleado.salary = decimal.Parse(entSalary.Text);
+            //this.oEmpleado.birth_date = dapBirthdate.Date.ToString();
+            //this.oEmpleado.is_enabled = swIsEnabled.IsToggled;
+
             using (var oCompData = new ComponentData())
             {
-                oCompData.update_empleado(oEmpleado);
+                oCompData.update_empleado(oEmp);
             }
 
             await DisplayAlert("Confirmación", "Empleado modificado correctamente", "Aceptar");

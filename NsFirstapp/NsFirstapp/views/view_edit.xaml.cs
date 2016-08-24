@@ -19,6 +19,7 @@ namespace NsFirstapp.views
         {
             InitializeComponent();
             this.oEmpleado = oEmpleado;
+            
             butUpdate.Clicked += ButUpdate_Clicked;
             butDelete.Clicked += ButDelete_Clicked;
 
@@ -30,14 +31,67 @@ namespace NsFirstapp.views
 
         }//ViewEdit
 
-        private void ButDelete_Clicked(object sender, EventArgs e)
+        public async void ButDelete_Clicked(object sender, EventArgs e)
         {
-            
-        }
+            bool isConfirmed = await DisplayAlert("Confirmación", "¿Desea borrar el empleado?", "Sí", "No");
+            if (!isConfirmed)
+                return;
 
-        private void ButUpdate_Clicked(object sender, EventArgs e)
+            using (var oDb = new ComponentData())
+            {
+                oDb.delete_empleado(this.oEmpleado);
+            }
+
+            await DisplayAlert("Confirmación", "Empleado borrado correctamente", "Aceptar");
+            //se recarga la pagina home
+            await Navigation.PushAsync(new ViewHomepage());
+        }//ButDelete_Clicked
+
+        public async void ButUpdate_Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
-        }
+            bool isConfirmed = await DisplayAlert("Confirmación", "¿Desea guardar el empleado?", "Sí", "No");
+            if (!isConfirmed)
+                return;
+
+            if (string.IsNullOrEmpty(entFirstName.Text))
+            {
+                await DisplayAlert("Error", "Debe ingresar nombres", "Aceptar");
+                entFirstName.Focus();
+                return;
+            }
+
+            if (string.IsNullOrEmpty(entLastName.Text))
+            {
+                await DisplayAlert("Error", "Debe ingresar apellidos", "Aceptar");
+                entLastName.Focus();
+                return;
+            }
+
+            if (string.IsNullOrEmpty(entSalary.Text))
+            {
+                await DisplayAlert("Error", "Debe ingresar salario", "Aceptar");
+                entSalary.Focus();
+                return;
+            }
+
+            ModelEmpleado oEmpelado = new ModelEmpleado
+            {
+                id = this.oEmpleado.id,
+                is_enabled = swIsEnabled.IsToggled,
+                first_name = entFirstName.Text,
+                last_name = entLastName.Text,
+                birth_date = dapBirthdate.Date.ToString(),
+                salary = decimal.Parse(entSalary.Text)
+            };
+
+            using (var oCompData = new ComponentData())
+            {
+                oCompData.update_empleado(oEmpleado);
+            }
+
+            await DisplayAlert("Confirmación", "Empleado modificado correctamente", "Aceptar");
+            //se recarga la pagina home
+            await Navigation.PushAsync(new ViewHomepage());
+        }//ButUpdate_Clicked
     }//ViewEdit
 }//NsFirstapp.views

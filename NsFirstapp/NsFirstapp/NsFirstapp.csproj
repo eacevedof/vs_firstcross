@@ -34,11 +34,27 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>firstapp_key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="theframework\behaviours\BehaviourMain.cs" />
+    <Compile Include="theapplication\behaviours\TheApplicationBehaviour.cs" />
+    <Compile Include="theframework\core\TheFrameworkComponent.cs" />
+    <Compile Include="theframework\core\TheFrameworkModel.cs" />
+    <Compile Include="theframework\core\TheFrameworkView.cs" />
+    <Compile Include="theframework\core\TheFrameworkController.cs" />
+    <Compile Include="theframework\core\TheFrameworkHelper.cs" />
+    <Compile Include="theframework\core\TheFrameworkBehaviour.cs" />
     <Compile Include="theframework\components\ComponentData.cs" />
-    <Compile Include="theframework\helpers\HelperViewCellEmpleado.cs" />
+    <Compile Include="theframework\core\TheFramework.cs" />
+    <Compile Include="theapplication\helpers\HelperViewCellEmpleado.cs" />
     <Compile Include="theframework\views\view_edit.xaml.cs">
       <DependentUpon>view_edit.xaml</DependentUpon>
     </Compile>
@@ -71,6 +87,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="firstapp_key.snk" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="packages.config" />
   </ItemGroup>

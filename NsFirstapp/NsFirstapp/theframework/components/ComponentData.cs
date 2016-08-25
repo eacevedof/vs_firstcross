@@ -15,7 +15,7 @@ using NsFirstapp.interfaces;
 using NsFirstapp.models;
 
 
-namespace NsFirstapp.components
+namespace NSTheframework.Components
 {
     public class ComponentData : IDisposable
     {

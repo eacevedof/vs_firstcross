@@ -17,7 +17,8 @@ namespace NsFirstapp.helpers
             var lblId = new Label
             {
                 TextColor = Color.White,
-                Font = Font.BoldSystemFontOfSize(NamedSize.Medium),
+                //Font = Font.BoldSystemFontOfSize(NamedSize.Medium), OBSOLETE
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
                 HorizontalOptions = LayoutOptions.End
             };
 
@@ -26,7 +27,7 @@ namespace NsFirstapp.helpers
             var lblFirstName = new Label
             {
                 TextColor = Color.White,
-                Font = Font.BoldSystemFontOfSize(NamedSize.Medium),
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
                 HorizontalOptions = LayoutOptions.End
             };
 
@@ -35,7 +36,7 @@ namespace NsFirstapp.helpers
             var lblLastName = new Label
             {
                 TextColor = Color.White,
-                Font = Font.BoldSystemFontOfSize(NamedSize.Medium),
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
                 HorizontalOptions = LayoutOptions.End
             };
 
@@ -44,7 +45,7 @@ namespace NsFirstapp.helpers
             var lblSalary = new Label
             {
                 TextColor = Color.White,
-                Font = Font.BoldSystemFontOfSize(NamedSize.Medium),
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
                 HorizontalOptions = LayoutOptions.End
             };
             lblSalary.SetBinding(Label.TextProperty, new Binding("salary"));
@@ -52,7 +53,7 @@ namespace NsFirstapp.helpers
             var lblBirthdate = new Label
             {
                 TextColor = Color.White,
-                Font = Font.BoldSystemFontOfSize(NamedSize.Medium),
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
                 HorizontalOptions = LayoutOptions.End
             };
             lblBirthdate.SetBinding(Label.TextProperty, new Binding("birth_date"));

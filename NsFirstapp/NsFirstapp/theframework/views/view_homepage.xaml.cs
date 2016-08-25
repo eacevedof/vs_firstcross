@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 
 using NsFirstapp.models;
-using NsFirstapp.components;
+using NSTheframework.Components;
 using NsFirstapp.helpers;
 
 namespace NsFirstapp.views

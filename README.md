@@ -1,5 +1,5 @@
 # vs_firstcross
-# Visual Studio - Xamarin First cross platform application using C#
+# Visual Studio - Xamarin First cross platform application using C-Sharp
 
 First CRUD mobile app 
 TUTORIAL:

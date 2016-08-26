@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="the_application\behaviours\TheApplicationBehaviour.cs" />
+    <Compile Include="the_application\components\AppComponentDemo.cs" />
     <Compile Include="the_framework\core\TheFrameworkComponent.cs" />
     <Compile Include="the_framework\core\TheFrameworkModel.cs" />
     <Compile Include="the_framework\core\TheFrameworkView.cs" />
@@ -99,7 +100,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="the_application\controllers\" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="the_application\views\view_edit.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

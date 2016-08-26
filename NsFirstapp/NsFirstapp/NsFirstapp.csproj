@@ -61,9 +61,11 @@
     <Compile Include="the_application\views\view_homepage.xaml.cs">
       <DependentUpon>view_homepage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="the_framework\helpers\HelperDemo.cs" />
     <Compile Include="the_framework\interfaces\InterfaceConfig.cs" />
     <Compile Include="the_application\models\ModelEmpleado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="the_framework\vendors\VendorDemo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Mono.Android">

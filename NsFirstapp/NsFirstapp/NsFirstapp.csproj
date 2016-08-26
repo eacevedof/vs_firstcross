@@ -45,24 +45,24 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="theapplication\behaviours\TheApplicationBehaviour.cs" />
-    <Compile Include="theframework\core\TheFrameworkComponent.cs" />
-    <Compile Include="theframework\core\TheFrameworkModel.cs" />
-    <Compile Include="theframework\core\TheFrameworkView.cs" />
-    <Compile Include="theframework\core\TheFrameworkController.cs" />
-    <Compile Include="theframework\core\TheFrameworkHelper.cs" />
-    <Compile Include="theframework\core\TheFrameworkBehaviour.cs" />
-    <Compile Include="theframework\components\ComponentData.cs" />
-    <Compile Include="theframework\core\TheFramework.cs" />
-    <Compile Include="theapplication\helpers\HelperViewCellEmpleado.cs" />
-    <Compile Include="theframework\views\view_edit.xaml.cs">
+    <Compile Include="the_application\behaviours\TheApplicationBehaviour.cs" />
+    <Compile Include="the_framework\core\TheFrameworkComponent.cs" />
+    <Compile Include="the_framework\core\TheFrameworkModel.cs" />
+    <Compile Include="the_framework\core\TheFrameworkView.cs" />
+    <Compile Include="the_framework\core\TheFrameworkController.cs" />
+    <Compile Include="the_framework\core\TheFrameworkHelper.cs" />
+    <Compile Include="the_framework\core\TheFrameworkBehaviour.cs" />
+    <Compile Include="the_framework\components\ComponentData.cs" />
+    <Compile Include="the_framework\core\TheFramework.cs" />
+    <Compile Include="the_application\helpers\HelperViewCellEmpleado.cs" />
+    <Compile Include="the_application\views\view_edit.xaml.cs">
       <DependentUpon>view_edit.xaml</DependentUpon>
     </Compile>
-    <Compile Include="theframework\views\view_homepage.xaml.cs">
+    <Compile Include="the_application\views\view_homepage.xaml.cs">
       <DependentUpon>view_homepage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="theframework\interfaces\InterfaceConfig.cs" />
-    <Compile Include="theframework\models\ModelEmpleado.cs" />
+    <Compile Include="the_framework\interfaces\InterfaceConfig.cs" />
+    <Compile Include="the_application\models\ModelEmpleado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -92,14 +92,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="theframework\views\view_homepage.xaml">
+    <EmbeddedResource Include="the_application\views\view_homepage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="theframework\views\view_edit.xaml">
+    <EmbeddedResource Include="the_application\views\view_edit.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

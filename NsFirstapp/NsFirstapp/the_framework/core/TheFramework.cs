@@ -10,7 +10,7 @@ namespace NSTheframework.Core
     {
         public TheFramework()
         {
-        }
+        }//TheFramework()
 
     }//TheFramework
 

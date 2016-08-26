@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using NSTheframework.Core;
-namespace NSTheframework
+namespace NSTheframework.Core
 {
     public class TheFrameworkComponent:TheFramework
     {
-        public TheFrameworkComponent()
+        public TheFrameworkComponent():base()
         {
 
         }//TheFrameworkComponent()

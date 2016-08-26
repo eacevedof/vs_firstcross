@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using NSTheframework.Core;
-
-namespace NSTheframework
+namespace NSTheframework.Core
 {
     public class TheFrameworkBehaviour : TheFramework
     {
-        public TheFrameworkBehaviour()
+        public TheFrameworkBehaviour():base()
         {
 
         }//TheFrameworkBehaviour()

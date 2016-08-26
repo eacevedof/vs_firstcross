@@ -48,6 +48,10 @@
     <Compile Include="the_application\behaviours\TheApplicationBehaviour.cs" />
     <Compile Include="the_application\components\TheApplicationComponent.cs" />
     <Compile Include="the_application\controllers\TheApplicationComponent.cs" />
+    <Compile Include="the_application\helpers\TheApplicationHelper.cs" />
+    <Compile Include="the_application\models\TheApplicationModel.cs" />
+    <Compile Include="the_application\views\TheApplicationModel.cs" />
+    <Compile Include="the_framework\config\Database.cs" />
     <Compile Include="the_framework\core\TheFrameworkComponent.cs" />
     <Compile Include="the_framework\core\TheFrameworkModel.cs" />
     <Compile Include="the_framework\core\TheFrameworkView.cs" />

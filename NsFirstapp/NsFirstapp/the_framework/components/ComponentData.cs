@@ -78,6 +78,8 @@ namespace NSTheframework.Components
         {
             this.oSQLiteConn.Dispose();
         }//Dispose
+
+  
     }//ComponentData
 
 }//NsFirstapp.components

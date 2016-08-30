@@ -7,15 +7,23 @@ using System.Threading.Tasks;
 using SQLite.Net;
 using NSTheframework.Components;
 
-namespace NSTheframework.Core
+namespace NSTheframework.Core 
 {
-    public class TheFrameworkModel:TheFramework
+    public class TheFrameworkModel:TheFramework,IDisposable
     {
-        protected SQLiteConnection oConn;
+        protected SQLiteConnection oSQLiteConn;
 
         public TheFrameworkModel():base()
         {
 
         }//TheFrameworkModel()
+
+
+
+        public void Dispose()
+        {
+            this.oSQLiteConn.Dispose();
+        }//Dispose
+
     }//TheFrameworkModel
 }//NSTheframework.Core

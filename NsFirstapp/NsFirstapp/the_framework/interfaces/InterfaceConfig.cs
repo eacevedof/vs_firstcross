@@ -1,5 +1,5 @@
 ﻿/**
-* @file:\NsFirstapp\NsFirstapp\interfaces\InterfaceConfig.cs 1.0.0
+* @file:\NsFirstapp\NsFirstapp\Interfaces\InterfaceConfig.cs 1.0.0
 **/
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 using SQLite.Net.Interop;
 
-namespace NsFirstapp.interfaces
+namespace NsFirstapp.Interfaces
 {
     public interface InterfaceConfig
     {
@@ -18,4 +18,4 @@ namespace NsFirstapp.interfaces
 
     }//InterfaceConfig
 
-}//NsFirstapp.interfaces
+}//NsFirstapp.Interfaces

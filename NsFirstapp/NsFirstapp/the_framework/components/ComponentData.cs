@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 using SQLite.Net;
 using Xamarin.Forms;
-using System.IO;
+using System.IO; //para Path.Combine
 
 using NSTheframework.Config;
-using NsFirstapp.interfaces;
+using NsFirstapp.Interfaces;
 using NsFirstapp.models;
 
 

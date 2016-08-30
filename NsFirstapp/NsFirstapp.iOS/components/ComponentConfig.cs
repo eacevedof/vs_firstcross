@@ -4,7 +4,7 @@
 
 using System;
 
-using NsFirstapp.interfaces;
+using NsFirstapp.Interfaces;
 using SQLite.Net.Interop;
 
 //necesito este NS para que esta interface se pueda usar en toda la app

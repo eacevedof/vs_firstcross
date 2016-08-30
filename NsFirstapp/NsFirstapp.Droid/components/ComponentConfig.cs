@@ -12,7 +12,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using NsFirstapp.interfaces;
+using NsFirstapp.Interfaces;
 using SQLite.Net.Interop;
 
 //necesito este NS para que esta interface se pueda usar en toda la app

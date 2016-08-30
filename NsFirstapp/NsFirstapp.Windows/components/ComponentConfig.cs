@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SQLite.Net.Interop;
-using NsFirstapp.interfaces;
+using NsFirstapp.Interfaces;
 
 //necesito este NS para que esta interface se pueda usar en toda la app
 using Xamarin.Forms;

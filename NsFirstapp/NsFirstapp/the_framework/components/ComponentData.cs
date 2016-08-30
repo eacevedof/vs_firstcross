@@ -11,6 +11,7 @@ using SQLite.Net;
 using Xamarin.Forms;
 using System.IO;
 
+using NSTheframework.Config;
 using NsFirstapp.interfaces;
 using NsFirstapp.models;
 
@@ -25,9 +26,9 @@ namespace NSTheframework.Components
         public ComponentData()
         {
             this.oSQLiteConn = null;
-            this.sDbName = "db_empleados.db3";
+            this.sDbName = ConfDatabase.NAME;
             this.db_connect();
-        }
+        }//ComponentData
 
         public void db_connect()
         {

@@ -9,7 +9,7 @@ namespace NSTheapplication.Components
 {
     public class TheApplicationModel: TheFrameworkModel
     {
-        public TheApplicationModel():base()
+        public TheApplicationModel():base("sometable")
         {
 
         }//TheApplicationModel()

@@ -13,7 +13,7 @@ using SQLite.Net;
 
 using NSTheframework.Config;
 using NsFirstapp.Interfaces;
-using NSTheframework.Components;
+//using NSTheframework.Components;
 
 namespace NSTheframework.Core 
 {
@@ -43,8 +43,11 @@ namespace NSTheframework.Core
             if(!String.IsNullOrEmpty(this.sTableName))
             {
                 //this.oSQLiteConn.CreateTable<ModelEmpleado>();
+                //http://www.bricelam.net/2015/04/29/sqlite-on-corefx.html
+                //https://msdn.microsoft.com/en-us/magazine/mt736454.aspx?f=255&MSPPError=-2147217396
+                //SQLiteCommand oCmd = "";
             }
-        }
+        }//create_table
 
         public void Dispose()
         {

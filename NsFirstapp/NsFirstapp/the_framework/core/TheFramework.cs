@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,10 @@ namespace NSTheframework.Core
         {
         }//TheFramework()
 
+        public void pr(string s)
+        {
+            System.Diagnostics.Debug.WriteLine(s);
+        }
     }//TheFramework
 
 }//NSTheframework.Core

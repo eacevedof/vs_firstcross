@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 using NSTheframework.Core;
-namespace NSTheapplication.Components
+namespace NSTheapplication.Models
 {
     public class TheApplicationModel: TheFrameworkModel
     {
-        public TheApplicationModel():base("sometable")
+        public TheApplicationModel(string sTableName):base(sTableName)
         {
 
         }//TheApplicationModel()

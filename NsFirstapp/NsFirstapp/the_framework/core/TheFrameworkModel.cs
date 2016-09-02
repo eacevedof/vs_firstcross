@@ -56,15 +56,12 @@ namespace NSTheframework.Core
 
         protected void create_table()
         {
-            if(!String.IsNullOrEmpty(this.sTableName))
-            {
-                //this.oSQLiteConn.CreateTable<ModelEmpleado>();
-                //http://www.bricelam.net/2015/04/29/sqlite-on-corefx.html
-                //https://msdn.microsoft.com/en-us/magazine/mt736454.aspx?f=255&MSPPError=-2147217396
-                //SQLiteCommand oCmd = "";
-            }
+            //http://www.bricelam.net/2015/04/29/sqlite-on-corefx.html
+            //https://msdn.microsoft.com/en-us/magazine/mt736454.aspx?f=255&MSPPError=-2147217396
+            //this.oSQLiteConn.CreateTable<this>();
         }//create_table
 
+        
         public void Dispose()
         {
             this.oSQLiteConn.Dispose();

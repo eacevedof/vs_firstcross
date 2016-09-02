@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using NSTheframework.Core;
 
-namespace NSTheappliation.Behaviours
+namespace NSTheapplication.Behaviours
 {
     public class TheApplicationBehaviour: TheFrameworkBehaviour
     {
@@ -15,4 +15,4 @@ namespace NSTheappliation.Behaviours
 
         }//TheApplicationBehaviour()
     }//TheApplicationBehaviour
-}//NSTheappliation.Behaviours
+}//NSTheapplication.Behaviours

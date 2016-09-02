@@ -49,6 +49,7 @@
     <Compile Include="the_application\components\TheApplicationComponent.cs" />
     <Compile Include="the_application\controllers\TheApplicationComponent.cs" />
     <Compile Include="the_application\helpers\TheApplicationHelper.cs" />
+    <Compile Include="the_application\models\ModelUser.cs" />
     <Compile Include="the_application\models\TheApplicationModel.cs" />
     <Compile Include="the_application\views\TheApplicationView.cs" />
     <Compile Include="the_framework\config\ConfDatabase.cs" />
@@ -105,7 +106,10 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="database\" />
+    <Folder Include="devdocuments\" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="the_application\views\view_edit.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

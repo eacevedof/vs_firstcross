@@ -41,6 +41,11 @@ namespace NSTheframework.Components
 
         }//db_connect
 
+        public void table_baseuser()
+        {
+            this.oSQLiteConn.CreateTable<ModelUser>();
+        }
+
         public void insert_empleado(ModelEmployee oEmpleado)
         {
             this.oSQLiteConn.Insert(oEmpleado);

@@ -24,7 +24,6 @@ namespace NsFirstapp.views
             lvwEmpleados.ItemSelected += LvwEmpleados_ItemSelected;
             lvwEmpleados.ItemTemplate = new DataTemplate(typeof(HelperViewCellEmpleado));
 
-            ModelUser oUser = new ModelUser();
             //Task.Delay(TimeSpan.FromSeconds(5)).Wait();
             //Task.Delay(10000).Wait();
             //DisplayAlert("trace","Model user","aceptar");
@@ -46,6 +45,11 @@ namespace NsFirstapp.views
 
         public void ButInsert_Clicked(object sender, EventArgs e)
         {
+            ModelUser oUser = new ModelUser();
+            ComponentData oComp = new ComponentData();
+            oComp.table_baseuser();
+            DisplayAlert("success", "tabla baseuser", "Aceptar");
+
             if (string.IsNullOrEmpty(entFirstName.Text))
             {
                 DisplayAlert("Error", "Debe ingresar nombres :)", "Aceptar");
@@ -89,6 +93,8 @@ namespace NsFirstapp.views
                 dapBirthdate.Date = DateTime.Now;
                 DisplayAlert("Success", "Empleado creado correctamente", "Aceptar");
             }
+
+
         }//ButInsert_Clicked
 
     }//ViewHomepage : ContentPage

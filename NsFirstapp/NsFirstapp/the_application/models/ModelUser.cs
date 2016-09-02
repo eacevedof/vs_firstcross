@@ -84,28 +84,31 @@ namespace NSTheapplication.Models
 
         public ModelUser() : base()
         {
+            this.pr("ModelUser.constructor");
             this.sTableName = "base_user";
             this.drop_table();
-            this.create_table();
+            //Esto esta dando problemas circulares de recursividad ya que se llama a si mismo.
+            //this.create_table();
         }//ModelUser
 
         private void drop_table()
         {
-            this.pr("ModelUser.droptable");
+            this.pr("ModelUser.droptable 1");
             string sSQL = "DROP TABLE IF EXISTS " + this.sTableName+";";
             this.execute(sSQL);
         }//drop_table
 
         private new void create_table()
         {
-            this.pr("ModelUser.create_table");
+            //MAL!!!
+            this.pr("ModelUser.create_table 1");
             try
             {
                 this.oSQLiteConn.CreateTable<ModelUser>();
             }
             catch (Exception oEx)
             {
-                this.pr(oEx.GetBaseException().ToString());
+                this.pr("ModelUser->create_table EXEPTION!!!: "+oEx.GetBaseException().ToString());
             }
         }//create_table
 

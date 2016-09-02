@@ -1,5 +1,5 @@
 ﻿/*
- *@file: \NsFirstapp\NsFirstapp\the_framework\core\TheFrameworkModel.cs 1.0.0
+ *@file: NsFirstapp\the_framework\core\TheFrameworkModel.cs 1.0.1
  */
 using System;
 using System.Collections.Generic;
@@ -37,6 +37,22 @@ namespace NSTheframework.Core
             this.oSQLiteConn = new SQLiteConnection(oCompConfig.get_platform
                 , Path.Combine(oCompConfig.get_db_folder, ConfDatabase.NAME));
         }//db_connect
+
+        public List<string> query(string sSQL)
+        {
+            List<string> lstString = new List<string>();
+            SQLiteCommand oSQLCmd = this.oSQLiteConn.CreateCommand(sSQL);
+            lstString = oSQLCmd.ExecuteQuery<string>();
+            return lstString;
+        }//query
+
+        public int execute(string sSQL)
+        {
+            int iResult = 0;
+            SQLiteCommand oSQLCmd = this.oSQLiteConn.CreateCommand(sSQL);
+            iResult = oSQLCmd.ExecuteNonQuery();
+            return iResult;
+        }//execute
 
         protected void create_table()
         {

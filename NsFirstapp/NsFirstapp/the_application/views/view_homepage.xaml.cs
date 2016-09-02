@@ -25,6 +25,7 @@ namespace NsFirstapp.views
             lvwEmpleados.ItemTemplate = new DataTemplate(typeof(HelperViewCellEmpleado));
 
             ModelUser oUser = new ModelUser();
+            //Task.Delay(TimeSpan.FromSeconds(5)).Wait();
             //Task.Delay(10000).Wait();
             //DisplayAlert("trace","Model user","aceptar");
 

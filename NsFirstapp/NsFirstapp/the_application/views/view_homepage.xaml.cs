@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-using NsFirstapp.Models;
+using NSTheapplication.Models;
 using NSTheframework.Components;
 using NsFirstapp.helpers;
 

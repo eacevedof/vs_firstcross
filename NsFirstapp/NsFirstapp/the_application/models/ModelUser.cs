@@ -1,5 +1,5 @@
 ﻿/**
-* @file:\NsFirstapp\NsFirstapp\models\ModelUser.cs 1.0.3
+* @file:\NsFirstapp\NsFirstapp\models\ModelUser.cs 1.0.1
 **/
 using System;
 using System.Collections.Generic;
@@ -8,9 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 using SQLite.Net.Attributes;
-using NSTheapplication.Models;
 
-namespace NsFirstapp.Models
+namespace NSTheapplication.Models
 {
     [Table("base_user")]
     public class ModelUser:TheApplicationModel
@@ -80,4 +79,4 @@ namespace NsFirstapp.Models
         }//ToString
 
     }//ModelUser
-}//NsFirstapp.models
+}//NSTheapplication.Models

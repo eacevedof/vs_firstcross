@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using SQLite.Net.Attributes;
 
 
-namespace NsFirstapp.Models
+namespace NSTheapplication.Models
 {
     [Table("app_emloyee")]
     public class ModelEmpleado

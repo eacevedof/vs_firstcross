@@ -13,7 +13,7 @@ using System.IO; //para Path.Combine
 
 using NSTheframework.Config;
 using NsFirstapp.Interfaces;
-using NsFirstapp.Models;
+using NSTheapplication.Models;
 
 
 namespace NSTheframework.Components

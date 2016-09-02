@@ -88,7 +88,7 @@ namespace NSTheapplication.Models
             this.sTableName = "base_user";
             this.drop_table();
             this.create_table();
-        }
+        }//ModelUser
 
         private void drop_table()
         {
@@ -97,7 +97,7 @@ namespace NSTheapplication.Models
             this.execute(sSQL);
         }//drop_table
 
-        private void create_table()
+        private new void create_table()
         {
             this.pr("ModelUser.create_table");
             try

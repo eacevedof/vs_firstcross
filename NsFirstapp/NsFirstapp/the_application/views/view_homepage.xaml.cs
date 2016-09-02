@@ -24,7 +24,9 @@ namespace NsFirstapp.views
             lvwEmpleados.ItemSelected += LvwEmpleados_ItemSelected;
             lvwEmpleados.ItemTemplate = new DataTemplate(typeof(HelperViewCellEmpleado));
 
-            //ModelUser oUser = new ModelUser();
+            ModelUser oUser = new ModelUser();
+            //Task.Delay(10000).Wait();
+            //DisplayAlert("trace","Model user","aceptar");
 
             using (var oCompData = new ComponentData())
             {
@@ -45,7 +47,7 @@ namespace NsFirstapp.views
         {
             if (string.IsNullOrEmpty(entFirstName.Text))
             {
-                DisplayAlert("Error", "Debe ingresar nombres", "Aceptar");
+                DisplayAlert("Error", "Debe ingresar nombres :)", "Aceptar");
                 entFirstName.Focus();
                 return;         
             }

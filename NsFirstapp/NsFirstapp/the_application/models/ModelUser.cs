@@ -87,7 +87,7 @@ namespace NSTheapplication.Models
         {
             this.sTableName = "base_user";
             this.drop_table();
-            //this.create_table();
+            this.create_table();
         }
 
         private void drop_table()
@@ -99,6 +99,7 @@ namespace NSTheapplication.Models
 
         private void create_table()
         {
+            this.pr("ModelUser.create_table");
             try
             {
                 this.oSQLiteConn.CreateTable<ModelUser>();

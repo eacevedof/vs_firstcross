@@ -16,8 +16,7 @@ namespace NSTheapplication.Models
     {
         [MaxLength(5)]
         public string processflag { get; set; }
-        //[MaxLength(3),Default(true,"2")]
-        [MaxLength(3)]
+        [MaxLength(3),Default(true,"2")]
         public string insert_platform { get; set; }
         [MaxLength(15)]
         public string insert_user { get; set; }
@@ -37,7 +36,7 @@ namespace NSTheapplication.Models
         public string delete_date { get; set; }
         [MaxLength(500)]
         public string cru_csvnote { get; set; }
-        //[MaxLength(3),Default(true, "0")]
+        //[MaxLength(3),Default(true,"0")]
         [MaxLength(3)]
         public string is_erpsent { get; set; }
         //[MaxLength(3),Default(true,"1")]

@@ -37,41 +37,41 @@ namespace NSTheframework.Components
             this.oSQLiteConn = new SQLiteConnection(oCompConfig.get_platform
                 ,Path.Combine(oCompConfig.get_db_folder,this.sDbName));
 
-            this.oSQLiteConn.CreateTable<ModelEmpleado>();
+            this.oSQLiteConn.CreateTable<ModelEmployee>();
 
         }//db_connect
 
-        public void insert_empleado(ModelEmpleado oEmpleado)
+        public void insert_empleado(ModelEmployee oEmpleado)
         {
             this.oSQLiteConn.Insert(oEmpleado);
         }//insert_empleado
 
-        public void update_empleado(ModelEmpleado oEmpleado)
+        public void update_empleado(ModelEmployee oEmpleado)
         {
             int iResult = this.oSQLiteConn.Update(oEmpleado);
         }//update_empleado
 
-        public void delete_empleado(ModelEmpleado oEmpleado)
+        public void delete_empleado(ModelEmployee oEmpleado)
         {
             int iResult = this.oSQLiteConn.Delete(oEmpleado);
         }//delete_empleado
 
-        public ModelEmpleado get_empleado(int idEmpleado)
+        public ModelEmployee get_empleado(int idEmpleado)
         {
-            return this.oSQLiteConn.Table<ModelEmpleado>().FirstOrDefault(c=>c.id == idEmpleado);
+            return this.oSQLiteConn.Table<ModelEmployee>().FirstOrDefault(c=>c.id == idEmpleado);
         }//get_empleado
 
-        public List<ModelEmpleado> get_empleados()
+        public List<ModelEmployee> get_empleados()
         {
-            return this.oSQLiteConn.Table<ModelEmpleado>().ToList();
+            return this.oSQLiteConn.Table<ModelEmployee>().ToList();
         }//get_empleados
 
-        public List<ModelEmpleado> get_empleados(bool isOrderApellidos)
+        public List<ModelEmployee> get_empleados(bool isOrderApellidos)
         {
             if(isOrderApellidos)
-                return this.oSQLiteConn.Table<ModelEmpleado>().OrderBy(c=>c.last_name).ToList();
+                return this.oSQLiteConn.Table<ModelEmployee>().OrderBy(c=>c.last_name).ToList();
             else
-                return this.oSQLiteConn.Table<ModelEmpleado>().ToList();
+                return this.oSQLiteConn.Table<ModelEmployee>().ToList();
         }//get_empleados
 
         public void Dispose()

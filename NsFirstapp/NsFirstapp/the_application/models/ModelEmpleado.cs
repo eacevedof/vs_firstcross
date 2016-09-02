@@ -1,5 +1,5 @@
 ﻿/**
-* @file:\NsFirstapp\NsFirstapp\models\ModelEmpleado.cs 1.0.3
+* @file:\NsFirstapp\NsFirstapp\models\ModelEmployee.cs 1.0.3
 **/
 using System;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ using SQLite.Net.Attributes;
 namespace NSTheapplication.Models
 {
     [Table("app_emloyee")]
-    public class ModelEmpleado
+    public class ModelEmployee
     {
         [PrimaryKey, AutoIncrement] 
         public int id { get; set; }
@@ -29,5 +29,5 @@ namespace NSTheapplication.Models
                 ,this.id,this.first_name,this.last_name,this.birth_date,this.salary,this.is_enabled);
         }//ToString
 
-    }//ModelEmpleado
-}//NsFirstapp.models
+    }//ModelEmployee
+}//NSTheapplication.Models

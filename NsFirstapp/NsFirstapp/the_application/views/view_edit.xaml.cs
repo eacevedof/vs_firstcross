@@ -18,8 +18,8 @@ namespace NsFirstapp.views
 {
     public partial class ViewEdit : ContentPage
     {
-        private ModelEmpleado oEmpleado;
-        public ViewEdit(ModelEmpleado oEmpleado)
+        private ModelEmployee oEmpleado;
+        public ViewEdit(ModelEmployee oEmpleado)
         {
             InitializeComponent();
             this.oEmpleado = oEmpleado;
@@ -82,7 +82,7 @@ namespace NsFirstapp.views
             //de este mismo ambito se usa este nombre se dara prioridada a la global (aún sin usar this)
             //por esto no me actualizaba con el objeto oEmpleado local. 
             //He cambiado el nombre y ahora todo bien.
-            ModelEmpleado oEmp = new ModelEmpleado
+            ModelEmployee oEmp = new ModelEmployee
             {
                 id = this.oEmpleado.id,
                 is_enabled = swIsEnabled.IsToggled,

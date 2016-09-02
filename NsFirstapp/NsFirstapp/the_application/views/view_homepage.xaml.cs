@@ -23,7 +23,9 @@ namespace NsFirstapp.views
             butInsert.Clicked += ButInsert_Clicked;
             lvwEmpleados.ItemSelected += LvwEmpleados_ItemSelected;
             lvwEmpleados.ItemTemplate = new DataTemplate(typeof(HelperViewCellEmpleado));
-                            
+
+            ModelUser oUser = new ModelUser();
+
             using (var oCompData = new ComponentData())
             {
                 lvwEmpleados.ItemsSource = oCompData.get_empleados();

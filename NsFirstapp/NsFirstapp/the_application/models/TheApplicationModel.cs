@@ -13,5 +13,11 @@ namespace NSTheapplication.Models
         {
 
         }//TheApplicationModel()
+
+        public TheApplicationModel():base()
+        {
+            
+        }
+
     }//TheApplicationModel
 }//NSTheapplication.Components

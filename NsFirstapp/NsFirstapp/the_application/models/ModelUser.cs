@@ -53,12 +53,10 @@ namespace NSTheapplication.Models
         public string login_latitude { get; set; }
         public string login_length { get; set; }
 
-        public ModelUser(string sTableName) : base(sTableName)
+        public ModelUser() : base()
         {
             this.create_table();
-            if (string.IsNullOrEmpty(sTableName))
-                sTableName = "base_user";
-            this.sTableName = sTableName;
+            this.sTableName = "base_user";
         }
 
         private void drop_table()

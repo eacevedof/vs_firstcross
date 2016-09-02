@@ -28,7 +28,12 @@ namespace NSTheframework.Core
             this.sTableName = sTableName;
             this.db_connect();
 
-        }//TheFrameworkModel()
+        }//TheFrameworkModel(1)
+
+        public TheFrameworkModel() : base()
+        {
+            this.db_connect();
+        }//TheFrameworkModel(2)
 
         public void db_connect()
         {

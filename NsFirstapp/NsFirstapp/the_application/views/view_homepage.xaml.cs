@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Diagnostics;
 using Xamarin.Forms;
 
 using NSTheapplication.Models;
@@ -43,30 +44,33 @@ namespace NsFirstapp.views
             this.Navigation.PushAsync(new ViewEdit((ModelEmployee) e.SelectedItem));
         }
 
-        public void ButInsert_Clicked(object sender, EventArgs e)
+        /*
+        El operador await se aplica a una tarea de un método asincrónico para suspender la ejecución del método 
+        hasta que la tarea en espera se complete.La tarea representa el trabajo en curso.
+        El método asincrónico en el que await se usa se debe modificar con la palabra clave async.Este tipo de método, 
+        que se define mediante el modificador async y generalmente contiene una o más expresiones await, se denomina 
+        método asincrónico.
+        */
+        public async void ButInsert_Clicked(object sender, EventArgs e)
         {
-            ModelUser oUser = new ModelUser();
-            ComponentData oComp = new ComponentData();
-            oComp.table_baseuser();
-            DisplayAlert("success", "tabla baseuser", "Aceptar");
 
             if (string.IsNullOrEmpty(entFirstName.Text))
             {
-                DisplayAlert("Error", "Debe ingresar nombres :)", "Aceptar");
+                await DisplayAlert("Error", "Debe ingresar nombres :)", "Aceptar");
                 entFirstName.Focus();
                 return;         
             }
 
             if (string.IsNullOrEmpty(entLastName.Text))
             {
-                DisplayAlert("Error", "Debe ingresar apellidos", "Aceptar");
+                await DisplayAlert("Error", "Debe ingresar apellidos", "Aceptar");
                 entLastName.Focus();
                 return;
             }
 
             if (string.IsNullOrEmpty(entSalary.Text))
             {
-                DisplayAlert("Error", "Debe ingresar salario", "Aceptar");
+                await DisplayAlert("Error", "Debe ingresar salario", "Aceptar");
                 entSalary.Focus();
                 return;
             }
@@ -91,10 +95,17 @@ namespace NsFirstapp.views
                 entSalary.Text = string.Empty;
 
                 dapBirthdate.Date = DateTime.Now;
-                DisplayAlert("Success", "Empleado creado correctamente", "Aceptar");
-            }
+                await DisplayAlert("Success", "Empleado creado correctamente", "Aceptar");
+            }//ComponentData
 
-
+            Debug.WriteLine("...new ModelUser()");
+            ModelUser oUser = new ModelUser();
+            Debug.WriteLine("...new ComponentData()");
+            ComponentData oComp = new ComponentData();
+            Debug.WriteLine("...antes de table_baseuser()");
+            oComp.table_baseuser();
+            Debug.WriteLine("...despues de table_baseuser()");
+            await DisplayAlert("success", "tabla baseuser", "Aceptar");
         }//ButInsert_Clicked
 
     }//ViewHomepage : ContentPage

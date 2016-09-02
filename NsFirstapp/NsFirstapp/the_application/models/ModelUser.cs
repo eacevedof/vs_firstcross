@@ -36,11 +36,9 @@ namespace NSTheapplication.Models
         public string delete_date { get; set; }
         [MaxLength(500)]
         public string cru_csvnote { get; set; }
-        //[MaxLength(3),Default(true,"0")]
-        [MaxLength(3)]
+        [MaxLength(3),Default(true,"0")]
         public string is_erpsent { get; set; }
-        //[MaxLength(3),Default(true,"1")]
-        [MaxLength(3)]
+        [MaxLength(3),Default(true,"1")]
         public string is_enabled { get; set; }
         public int i { get; set; }
 

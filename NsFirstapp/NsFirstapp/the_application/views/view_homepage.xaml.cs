@@ -100,7 +100,7 @@ namespace NsFirstapp.views
             }//ComponentData
 
             ComponentDbBuilder oBuild = new ComponentDbBuilder();
-            oBuild.build_db();
+            oBuild.build_db(true);
 
             //Bug.pr("antes de crear tabla", "MODO OBJETO");
             //ModelUser oUser = new ModelUser();

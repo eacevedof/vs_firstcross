@@ -1,22 +1,12 @@
 /*
  * @file: \NsFirstapp\NsFirstapp.Droid\components\ComponentConfig.cs 1.0.0
  */
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using NsFirstapp.Interfaces;
+using NSTheframework.Interfaces;
 using SQLite.Net.Interop;
 
 //necesito este NS para que esta interface se pueda usar en toda la app
 using Xamarin.Forms;
+
 //para que pueda usar la interface en la capa de aplicacion debemos utilizar esta etiqueta
 //Dependency nos permite tener compatibilidad con las 3 plataformas
 [assembly: Dependency(typeof(NsFirstapp.Droid.components.ComponentConfig))]

@@ -53,6 +53,8 @@
     <Compile Include="the_application\models\ModelUser.cs" />
     <Compile Include="the_application\models\TheApplicationModel.cs" />
     <Compile Include="the_application\views\TheApplicationView.cs" />
+    <Compile Include="the_framework\components\ComponentBug.cs" />
+    <Compile Include="the_framework\components\ComponentDbBuilder.cs" />
     <Compile Include="the_framework\config\ConfDatabase.cs" />
     <Compile Include="the_framework\core\TheFrameworkComponent.cs" />
     <Compile Include="the_framework\core\TheFrameworkModel.cs" />

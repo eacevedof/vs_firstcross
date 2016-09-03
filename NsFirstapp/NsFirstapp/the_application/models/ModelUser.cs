@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using SQLite.Net.Attributes;
-using NsFirstapp.Interfaces;
+using NSTheframework.Interfaces;
 using System.IO;
 
 namespace NSTheapplication.Models

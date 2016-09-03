@@ -12,8 +12,8 @@ using Xamarin.Forms;
 using SQLite.Net;
 
 using NSTheframework.Config;
-using NsFirstapp.Interfaces;
-//using NSTheframework.Components;
+using NSTheframework.Interfaces;
+
 
 namespace NSTheframework.Core 
 {

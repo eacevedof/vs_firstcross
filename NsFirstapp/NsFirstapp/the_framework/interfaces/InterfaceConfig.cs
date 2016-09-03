@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 using SQLite.Net.Interop;
 
-namespace NsFirstapp.Interfaces
+namespace NSTheframework.Interfaces
 {
     public interface InterfaceConfig
     {
@@ -18,4 +18,4 @@ namespace NsFirstapp.Interfaces
 
     }//InterfaceConfig
 
-}//NsFirstapp.Interfaces
+}//NSTheframework.Interfaces

@@ -12,9 +12,8 @@ using Xamarin.Forms;
 using System.IO; //para Path.Combine
 
 using NSTheframework.Config;
-using NsFirstapp.Interfaces;
 using NSTheapplication.Models;
-
+using NSTheframework.Interfaces;
 
 namespace NSTheframework.Components
 {

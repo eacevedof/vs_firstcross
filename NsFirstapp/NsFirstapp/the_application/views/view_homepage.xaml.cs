@@ -99,18 +99,18 @@ namespace NsFirstapp.views
                 await DisplayAlert("Success", "Empleado creado correctamente", "Aceptar");
             }//ComponentData
 
-            StTheFramework.pr("antes de crear tabla", "MODO OBJETO");
+            Bug.pr("antes de crear tabla", "MODO OBJETO");
             ModelUser oUser = new ModelUser();
-            StTheFramework.pr("...new ComponentData()");
+            Bug.pr("...new ComponentData()");
             ComponentData oComp = new ComponentData();
-            StTheFramework.pr("antes de oComp.table_baseuser()");
+            Bug.pr("antes de oComp.table_baseuser()");
             oComp.table_baseuser();
-            StTheFramework.pr("despues de oComp.table_baseuser()");
+            Bug.pr("despues de oComp.table_baseuser()");
             //await DisplayAlert("success", "tabla baseuser", "Aceptar");
 
-            //StTheFramework.pr("antes de crear tabla","MODO ESTATICO");
+            //Bug.pr("antes de crear tabla","MODO ESTATICO");
             //ModelUser.createtable();
-            //StTheFramework.pr("DESPUES de crear tabla", "MODO ESTATICO");
+            //Bug.pr("DESPUES de crear tabla", "MODO ESTATICO");
         }//ButInsert_Clicked
 
     }//ViewHomepage : ContentPage

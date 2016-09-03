@@ -1,13 +1,9 @@
 /**
  * @file: \NsFirstapp\NsFirstapp.WinPhone\components\ComponentConfig.cs 1.0.0
  **/
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using SQLite.Net.Interop;
-using NsFirstapp.Interfaces;
+using NSTheframework.Interfaces;
 
 //necesito este NS para que esta interface se pueda usar en toda la app
 using Xamarin.Forms;

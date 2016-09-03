@@ -20,19 +20,4 @@ namespace NSTheframework.Core
         }
     }//TheFramework
 
-    public static class StTheFramework
-    {
-        public static void pr(string s)
-        {
-            Debug.WriteLine(s);
-        }
-
-        public static void pr(string s, string t)
-        {
-            Debug.WriteLine(t);
-            Debug.WriteLine(s);
-        }
-
-    }//StTheFramework
-
 }//NSTheframework.Core

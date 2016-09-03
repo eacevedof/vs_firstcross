@@ -66,7 +66,6 @@ namespace NSTheframework.Core
             //this.oSQLiteConn.CreateTable<this>();
         }//create_table
 
-        
         public void Dispose()
         {
             this.oSQLiteConn.Dispose();

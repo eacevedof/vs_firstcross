@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 using SQLite.Net.Attributes;
+using NsFirstapp.Interfaces;
+using System.IO;
 
 namespace NSTheapplication.Models
 {
@@ -110,7 +112,13 @@ namespace NSTheapplication.Models
             }
         }//create_table
 
-
+        public static void createtable()
+        {
+            var oCompConfig = Xamarin.Forms.DependencyService.Get<InterfaceConfig>();
+            SQLite.Net.SQLiteConnection oSQLiteConn = new SQLite.Net.SQLiteConnection(oCompConfig.get_platform
+                , Path.Combine(oCompConfig.get_db_folder, NSTheframework.Config.ConfDatabase.NAME));
+            oSQLiteConn.CreateTable<ModelUser>();
+        }//createtable()
 
         public override string ToString()
         {

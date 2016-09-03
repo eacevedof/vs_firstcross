@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NsTheframework.Vendors
+namespace NSTheframework.Vendors
 {
     class VendorDemo
     {
     }//VendorDemo
-}//NsTheframework.Vendors
+}//NSTheframework.Vendors

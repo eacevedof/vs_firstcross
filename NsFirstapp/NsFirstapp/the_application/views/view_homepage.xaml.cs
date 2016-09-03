@@ -98,14 +98,18 @@ namespace NsFirstapp.views
                 await DisplayAlert("Success", "Empleado creado correctamente", "Aceptar");
             }//ComponentData
 
-            Debug.WriteLine("...new ModelUser()");
-            ModelUser oUser = new ModelUser();
-            Debug.WriteLine("...new ComponentData()");
-            ComponentData oComp = new ComponentData();
-            Debug.WriteLine("...antes de table_baseuser()");
-            oComp.table_baseuser();
-            Debug.WriteLine("...despues de table_baseuser()");
-            await DisplayAlert("success", "tabla baseuser", "Aceptar");
+            //Debug.WriteLine("...new ModelUser()");
+            //ModelUser oUser = new ModelUser();
+            //Debug.WriteLine("...new ComponentData()");
+            //ComponentData oComp = new ComponentData();
+            //Debug.WriteLine("...antes de table_baseuser()");
+            //oComp.table_baseuser();
+            //Debug.WriteLine("...despues de table_baseuser()");
+            //await DisplayAlert("success", "tabla baseuser", "Aceptar");
+
+            NSTheframework.Core.StTheFramework.pr("antes de crear tabla","MODO ESTATICO");
+            ModelUser.createtable();
+            NSTheframework.Core.StTheFramework.pr("DESPUES de crear tabla", "MODO ESTATICO");
         }//ButInsert_Clicked
 
     }//ViewHomepage : ContentPage

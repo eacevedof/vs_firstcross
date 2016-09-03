@@ -63,17 +63,17 @@ namespace NSTheframework.Components
 
         private void base_user()
         {
-            Bug.pr("ComponentDbBuilder.base_user", "START CREATION");
+            Bug.pr("START CREATION ComponentDbBuilder.base_user");
             this.oSQLiteConn.CreateTable<ModelUser>();
-            Bug.pr("ComponentDbBuilder.base_user", "END CREATION");
+            Bug.pr("END CREATION ComponentDbBuilder.base_user");
         }//create_user()
 
         private void app_employee()
         {
-            Bug.pr("ComponentDbBuilder.app_employee", "START CREATION");
+            Bug.pr("START CREATION ComponentDbBuilder.app_employee");
             this.oSQLiteConn.CreateTable<ModelEmployee>();
-            Bug.pr("ComponentDbBuilder.app_employee", "END CREATION");
-        }//create_user()
+            Bug.pr("END CREATION ComponentDbBuilder.app_employee");
+        }//app_employee()
 
     }//ComponentDbBuilder
 

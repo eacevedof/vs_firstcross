@@ -30,17 +30,27 @@ namespace NSTheframework.Components
         public void build_db()
         {
             this.base_user();
+            this.app_employee();
+
         }//build_db
+
+        private void drops()
+        {
+            string sSQL = "DROP TABLE IF EXISTS base_user";
+            this.execute(sSQL);
+            sSQL = "DROP TABLE IF EXISTS app_employee";
+            this.execute(sSQL);
+        }//drops
 
         public void build_db(bool useDrop)
         {
             if (useDrop)
             {
-                string sSQL = "DROP TABLE IF EXISTS base_user";
-                this.execute(sSQL);
-                sSQL = "DROP TABLE IF EXISTS app_employee";
-                this.execute(sSQL);
+                this.drops();
             }
+
+            this.build_db();
+            this.oSQLiteConn.Dispose();
         }//build_db(2)
 
         private void execute(string sSQL)
@@ -58,7 +68,12 @@ namespace NSTheframework.Components
             Bug.pr("ComponentDbBuilder.base_user", "END CREATION");
         }//create_user()
 
-
+        private void app_employee()
+        {
+            Bug.pr("ComponentDbBuilder.app_employee", "START CREATION");
+            this.oSQLiteConn.CreateTable<ModelEmployee>();
+            Bug.pr("ComponentDbBuilder.app_employee", "END CREATION");
+        }//create_user()
 
     }//ComponentDbBuilder
 

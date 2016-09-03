@@ -99,13 +99,16 @@ namespace NsFirstapp.views
                 await DisplayAlert("Success", "Empleado creado correctamente", "Aceptar");
             }//ComponentData
 
-            Bug.pr("antes de crear tabla", "MODO OBJETO");
-            ModelUser oUser = new ModelUser();
-            Bug.pr("...new ComponentData()");
-            ComponentData oComp = new ComponentData();
-            Bug.pr("antes de oComp.table_baseuser()");
-            oComp.table_baseuser();
-            Bug.pr("despues de oComp.table_baseuser()");
+            ComponentDbBuilder oBuild = new ComponentDbBuilder();
+            oBuild.build_db();
+
+            //Bug.pr("antes de crear tabla", "MODO OBJETO");
+            //ModelUser oUser = new ModelUser();
+            //Bug.pr("...new ComponentData()");
+            //ComponentData oComp = new ComponentData();
+            //Bug.pr("antes de oComp.table_baseuser()");
+            //oComp.table_baseuser();
+            //Bug.pr("despues de oComp.table_baseuser()");
             //await DisplayAlert("success", "tabla baseuser", "Aceptar");
 
             //Bug.pr("antes de crear tabla","MODO ESTATICO");

@@ -84,7 +84,7 @@ namespace NSTheapplication.Models
         {
             this.pr("ModelUser.constructor");
             this.sTableName = "base_user";
-            this.drop_table();
+            //this.drop_table();
             //Esto esta dando problemas circulares de recursividad ya que se llama a si mismo.
             //this.create_table();
         }//ModelUser
@@ -96,7 +96,7 @@ namespace NSTheapplication.Models
             this.execute(sSQL);
         }//drop_table
 
-        private new void create_table()
+        public new void create_table()
         {
             //MAL!!!
             this.pr("ModelUser.create_table 1");
@@ -109,6 +109,8 @@ namespace NSTheapplication.Models
                 this.pr("ModelUser->create_table EXEPTION!!!: "+oEx.GetBaseException().ToString());
             }
         }//create_table
+
+
 
         public override string ToString()
         {

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using Xamarin.Forms;
 
+using NSTheframework.Core;
 using NSTheapplication.Models;
 using NSTheframework.Components;
 using NsFirstapp.helpers;
@@ -98,18 +99,18 @@ namespace NsFirstapp.views
                 await DisplayAlert("Success", "Empleado creado correctamente", "Aceptar");
             }//ComponentData
 
-            //Debug.WriteLine("...new ModelUser()");
-            //ModelUser oUser = new ModelUser();
-            //Debug.WriteLine("...new ComponentData()");
-            //ComponentData oComp = new ComponentData();
-            //Debug.WriteLine("...antes de table_baseuser()");
-            //oComp.table_baseuser();
-            //Debug.WriteLine("...despues de table_baseuser()");
+            StTheFramework.pr("antes de crear tabla", "MODO OBJETO");
+            ModelUser oUser = new ModelUser();
+            StTheFramework.pr("...new ComponentData()");
+            ComponentData oComp = new ComponentData();
+            StTheFramework.pr("antes de oComp.table_baseuser()");
+            oComp.table_baseuser();
+            StTheFramework.pr("despues de oComp.table_baseuser()");
             //await DisplayAlert("success", "tabla baseuser", "Aceptar");
 
-            NSTheframework.Core.StTheFramework.pr("antes de crear tabla","MODO ESTATICO");
-            ModelUser.createtable();
-            NSTheframework.Core.StTheFramework.pr("DESPUES de crear tabla", "MODO ESTATICO");
+            //StTheFramework.pr("antes de crear tabla","MODO ESTATICO");
+            //ModelUser.createtable();
+            //StTheFramework.pr("DESPUES de crear tabla", "MODO ESTATICO");
         }//ButInsert_Clicked
 
     }//ViewHomepage : ContentPage
